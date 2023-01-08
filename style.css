@@ -11,13 +11,14 @@
 }
 nav{
     background-color: rgba(0,0,0,0.8);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
     height: 6.6vh;
     width: 100%;
     display: grid;
     place-content: center;
     place-items: center;
     grid-template-columns: repeat(8, 1fr);
+    z-index: 100;
     position: sticky;
     top: 0;
     padding: 0px 125px;
@@ -96,9 +97,13 @@ a{
     align-items: center;
     gap: 20px;
     padding-bottom: 30px;
+    position: relative;
+    overflow: hidden;
 }
 .iphone14pro img{
     height: 70%;
+    position: absolute;
+    bottom: -35px;
     width: 30%;
 }
 .itext{
@@ -262,12 +267,12 @@ footer{
     font-size: 12.5px;
 }
 .bottom a{
-
     color: rgb(66,66,69);
 }
 .left{
     border-right: 1px solid rgb(199, 198, 198);
     width: 40%;
+    padding-right: 20px;
     display: flex;
 }
 .left p{
@@ -291,6 +296,179 @@ footer{
     width: 60%;
     text-align: right;
 }
+
+/* MAC PAGE */
+.toppage{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    width: 60%;
+    place-content: center;
+    place-items: center;
+    margin: 0px auto;
+}
+.toppage a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.shrink{
+    width: 90%;
+    height: 30%;
+}
+.toppage a h2{
+    font-size: 13px;
+    color: rgb(29,29,31);
+    font-weight: 400;
+}
+.toppage a p{
+    font-size: 12px;
+    color: red;
+    text-align: center;
+}
+.machero{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://www.apple.com/v/home/au/images/promos/macbook-air/promo_macbookair__fywl7i82fueu_medium.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 700px;
+}
+.topmac,.topmac1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.topmac p,.topmac1 p{
+    color: red;
+    font-size: 20px;
+    font-weight: 600;
+}
+.topmac h1{
+    font-size: 55px;
+    color: rgb(29,29,31);
+}
+.topmac h2{
+    font-size: 25px;
+}
+.topmac a,.topmac1 a{
+    font-size: 18px;
+}
+.topmac h3{
+    font-size: 16px;
+    color: rgb(66,66,69);
+    font-weight: 400;
+    color:rgb(134,134,139);
+}
+.middle{
+    background-image: url(images/macbookpro13.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: 700px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+.topmac1{
+    color: rgb(245,245,247);
+    padding-top: 80px;
+}
+.topmac1 h1{
+    font-size: 60px;
+}
+.topmac1 h2{
+    font-size: 30px;
+}
+.buy{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.buy a:nth-child(2){
+    color: rgb(0,113,227);
+}
+.buybtn{
+    padding: 10px 20px;
+    color: white;
+    font-size: 15px;
+    background-color: rgb(0,113,227);
+    border-radius: 30px;
+    font-weight: 600;
+}
+.bmiddle{
+    padding-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+.bmiddlecont{
+    width: 100%;
+    /* margin: 0px auto; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    /* place-content: center; */
+    /* place-items: center; */
+    height: fit-content;
+}
+.bmiddle h1{
+    text-align: center;
+}
+.notendesk{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.macbook{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.macbook:nth-child(4){
+    position: relative;
+    bottom: 24px;
+}
+.macbook:nth-child(1){
+    position: relative;
+    bottom: 15px;
+}
+.macbook a{
+    font-size: 14px;
+}
+.macbook:nth-child(1) .buybtn,.macbook:nth-child(4) .buybtn{
+    position: relative;
+    top: 22px;
+}
+.macbook:nth-child(1) .learn,.macbook:nth-child(4) .learn{
+    position: relative;
+    top: 25px;
+}
+.macbook .buybtn{
+    font-size: 12px;
+}
+.macbook p{
+    color: red;
+    font-size: 13px;
+}
+@media only screen and (max-width:1330px){
+    .bottomsec, .topsec{
+        align-items: flex-start;
+        width: 90%;
+    }
+    
+}
 @media  screen and (max-width:1280px) {
     nav{
         padding: 0px;
@@ -300,16 +478,35 @@ footer{
     .devices{
         grid-template-columns: repeat(auto-fit,minmax(480px, 1fr));
     }
+    .iphone14pro img{
+        width: 40%;
+    }
+    .bottomsec, .topsec{
+        align-items: flex-start;
+        width: 95%;
+    }
     @media screen and (max-width:1000px) {
         .devices{
             padding: 0px;
         }
     }
-    @media screen and (max-width:863px){
+    @media screen and (max-width:912px){
         .hero{
             display: flex;
             flex-direction: column-reverse;
             gap: 20px;
+        }
+        .headers h1{
+            font-size: 45px;
+        }
+        .headers h2{
+            font-size: 25px;
+        }
+        .headers a{
+            font-size: 16px;
+        }
+        .iphone14pro img{
+            width: 50%;
         }
         nav{
             display: none;
@@ -335,11 +532,104 @@ footer{
         .heropic{
             height: 70%;
         }
+        .topsec{
+            display: flex;
+            flex-direction: column;
+            width: 95%;
+            align-items: flex-end;
+            gap: 10px;
+        }
+        .sec{
+            border-bottom: 1px solid rgb(134,134,139);
+            display: flex;
+            flex-direction: column;
+            padding: 7px 0px;
+            justify-content: center;
+            width: 100%;
+        }
+        .sec h2{
+            color: rgb(110,110,115);
+            font-weight: 400;
+            letter-spacing: -0.12px;
+            font-size: 13px;
+            line-height: 16px;
+        }
+        .sec h2::after{
+            content:'+';
+            position: absolute;
+            right: 20px;
+            cursor: pointer;
+        }
+        .sec a{
+            display: none;
+        }
+        footer{
+            height: 47vh;
+        }
+        .left{
+            display: flex;
+            flex-direction: column;
+            border: 0px;
+            width: 100%;
+            gap: 15px;
+        }
+        .left a, .left p{
+            width: 100%;
+            text-align: left;
+        }
+        .bottomsec{
+            width: 95%;
+        }
+        .upper{
+            padding-bottom: 7px;
+        }
+        .bottom{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+        }
+        .right{
+            width: 100%;
+            gap: 10px;
+            padding-left: 0;
+        }
+        .right a{
+            text-align: left;
+            width: max-content !important;
+        }
+        .right a:nth-child(1){
+            border-right: 1px solid rgb(134,134,139);
+            padding-right: 10px;
+        }
+    }
+    @media only screen and (max-width:600px){
+        .hero{
+            height: 66vh !important;
+            padding-bottom: 0;
+        }
+        .headers h1{
+            font-size: 30px;
+        }
+        .headers h2{
+            font-size:20px;
+        }
+        .headers a{
+            font-size: 15px;
+        }
+        .iphone14pro img{
+            width: 60%;
+        }
     }
     @media screen and (max-width:480px){
         .iphone14pro img{
-            height: 100%;
-            width:70%;
+            width:80%;
+        }
+        .devices{
+            grid-template-columns: repeat(auto-fit,minmax(100%, 1fr));
+        }
+        .card{
+            width: 100%;
         }
     }
 }
