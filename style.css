@@ -412,11 +412,8 @@ footer{
 }
 .bmiddlecont{
     width: 100%;
-    /* margin: 0px auto; */
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    /* place-content: center; */
-    /* place-items: center; */
     height: fit-content;
 }
 .bmiddle h1{
@@ -461,6 +458,201 @@ footer{
 .macbook p{
     color: red;
     font-size: 13px;
+}
+/* Where to Buy Section  */
+.buy_page{
+    background-color: rgb(245,246,247);
+}
+.buy_page nav{
+    display: grid;
+}
+.page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    gap: 30px;
+    zoom: 1;
+    width: 980px;
+    margin: 0px auto;
+}
+.page h2{
+    font-size: 24px;
+    text-align: left;
+    width: 100%;
+    color: rgb(75, 75, 75);
+    line-height: 32px;
+    font-weight: 700;
+}
+.page_content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+    gap: 20px;
+}
+.content1{
+    box-shadow: 0px 2px 3px rgb(130, 130, 131);
+    border-radius: 0.3125rem;
+    background-color: white;
+    height: 75vh;
+    padding-top: 30px;
+    width: 484px;
+    height: 510px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 23px;
+}
+.content1 img{
+    margin: 0px auto;
+}
+.content1 p{
+    font-size: 12px;
+}
+.all_products{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding-top: 10px;
+}
+.searchbar{
+    display: flex;
+    align-items: center;
+    box-shadow: 0px -1px 5px rgb(75, 75, 75);
+    padding-right: 10px;
+    border-radius: 40px;
+}
+.searchbar input{
+    border: none;
+    font-size: 11px;
+}
+.searchbar svg{
+    color: rgb(75, 75, 75);
+}
+.content_search{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.content_search select{
+    padding: 5px 0px;
+    padding-right: 110px;
+    font-size: 11px;
+}
+.content_search a{
+    border-radius: 0.3125rem;
+    font-size: 11px;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(172,172,172);
+    padding: 5px 10px;
+}
+.carriers{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.go{
+    color: white !important;
+}
+.go:hover{
+    text-decoration: none !important;
+}
+.all_products a{
+    font-size: 12px;
+    line-height: 18px;
+    color: rgb(0, 136, 204);
+}
+.all_products a:hover{
+    text-decoration: underline;
+}
+.buy_bottomsec p{
+    font-size: 10px;
+    color: rgb(136, 136, 136);
+    line-height: 15px;
+}
+.buy_bottomsec p:nth-child(1){
+    max-width: 100%;
+}
+.where-to-buy{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid rgb(136, 136, 136);
+    border-radius: 0.3125rem;
+    padding: 4px 0;
+    gap: 30px;
+    padding: none;
+}
+.where-to-buy p{
+    display: flex;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-left: 10px;
+}
+.where-to-buy h3{
+    font-size: 11px;
+    width: 85%;
+    font-weight: 400;
+    color: rgb(102,102,102);
+}
+.device{
+    width: 440px;
+    height: 222px;
+}
+.device1{
+    width: 238px;
+    height: 222px;
+}
+.where-to-buy i{
+    color: rgb(136, 136, 136);
+    font-size: 31px;
+    top: -8px;
+    position: absolute;
+    right: -20px;
+}
+.copyright{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.copyright p{
+    width: 55%;
+}
+.buy_links{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.buy_links a{
+    border-right: 1px solid rgb(136, 136, 136);
+    font-size: 11px;
+    color: rgb(0, 136, 204);
+    padding-right: 10px;
+}
+.lastsec{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    gap: 10px;
+    padding-bottom: 50px;
+}
+.lastsec p{
+    font-size: 11px;
+    color: rgb(136, 136, 136);
+}
+.regions{
+    text-align: left;
+    width: 85%;
+}
+.lastsec img{
+    width: 20px;
 }
 @media only screen and (max-width:1330px){
     .bottomsec, .topsec{
@@ -619,6 +811,9 @@ footer{
         }
         .iphone14pro img{
             width: 60%;
+        }
+        .buy_page{
+            zoom: 0.4;
         }
     }
     @media screen and (max-width:480px){
