@@ -1291,5 +1291,8 @@ footer{
         .card{
             width: 100%;
         }
+        .search_section{
+            padding: 10px;
+        }
     }
 }
